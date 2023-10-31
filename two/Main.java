@@ -1,53 +1,42 @@
-package two;
+package twoeasy;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		//////Cars
+		SimpleCar carre = new SimpleCar();
+		FamilyCar bigcarre = new FamilyCar();
+		Bicycle bike = new Bicycle();
+		carre.setSpeed(50);
+		carre.accelerate();
+		System.out.println(carre.getSpeed());
+		bigcarre.setSeats(4);
+		bigcarre.addSeat();
+		System.out.println(bigcarre.getSeats());
+		carre.honk();
+		carre.move();
+		bike.move();
+		if(bigcarre instanceof FamilyCar)System.out.println("This is a Family Car");
+		if(carre instanceof SimpleCar)System.out.println("This is a Simple Car");
 
-		Person person = new Person();
-		person.setAge(15);
-		person.setName("All");
-		person.introduce();
-		Student student = new Student();
-		student.setAge(15);
-		student.setName("Bll");
-		student.setGrade(3.50);
-		student.introduce();
-		
-		
-		Circle circle = new Circle();
-		circle.setR(5);
-		circle.area();
-		circle.perimeter();
-		Rectangle rectangle = new Rectangle();
-		rectangle.setA(5);
-		rectangle.setB(5);
-		rectangle.area();
-		rectangle.perimeter();
-	
-		
-		Car driveCar = new Car();
-		driveCar.setBrand("Ferrari");
-		driveCar.setFuel(40);
-		driveCar.setMileage(100000);
-		driveCar.setSpeed(30);
-		driveCar.accelerate();
-		System.out.println(driveCar.getSpeed());
-		driveCar.refuel();
-		System.out.println(driveCar.getFuel());
-		driveCar.drive(230);
-		
-		ElectricCar electricCar = new ElectricCar();
-		electricCar.setBatteryLevel(100);
-		electricCar.setBrand("Tesla");
-		electricCar.setEfficiency(30);
-		electricCar.setSpeed(140);
-		electricCar.drive(300);
-		electricCar.charge();
-		System.out.println(electricCar.getBatteryLevel());
-		
-		Car[ ] carObjects = new Car[5];
-
+		/////Dance
+		DanceMove moonwalk = new DanceMove();
+		moonwalk.setName("moonwalk");
+		moonwalk.setDuration(5);
+		moonwalk.perform();
+		moonwalk.start();
+		BreakDanceMove complex = new BreakDanceMove();
+		complex.setComplexity(5);
+		complex.setDuration(20);
+		complex.setName("Break Dance");
+		complex.perform();
+		Song bohemian = new Song();
+		bohemian.sing();
+		bohemian.start();
+		if(moonwalk instanceof DanceMove)System.out.println("This is a DanceMove");
+		if(complex instanceof BreakDanceMove)System.out.println("This is a BreakDanceMove");
+				
 	}
 
 }
