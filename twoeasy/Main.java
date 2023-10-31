@@ -17,8 +17,9 @@ public class Main {
 		carre.honk();
 		carre.move();
 		bike.move();
-		System.out.println(bigcarre instanceof FamilyCar);
-		
+		if(bigcarre instanceof FamilyCar)System.out.println("This is a Family Car");
+		if(carre instanceof SimpleCar)System.out.println("This is a Simple Car");
+
 		/////Dance
 		DanceMove moonwalk = new DanceMove();
 		moonwalk.setName("moonwalk");
@@ -33,6 +34,8 @@ public class Main {
 		Song bohemian = new Song();
 		bohemian.sing();
 		bohemian.start();
+		if(moonwalk instanceof DanceMove)System.out.println("This is a DanceMove");
+		if(complex instanceof BreakDanceMove)System.out.println("This is a BreakDanceMove");
 				
 	}
 
